@@ -36,19 +36,19 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ email, onClose }) => {
 
         {/* Header */}
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-primary mb-4">
-          SUCCESS! <br />CHECK YOUR EMAIL
+          WE'RE ON IT! <br />CHECK YOUR EMAIL SOON
         </h2>
 
         {/* Message */}
         <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-          Your personalized influencer mediaplan has been sent to{' '}
-          <span className="font-semibold text-primary">{email}</span>.<br />
-          Check your inbox (and spam folder just in case)!
+          Your personalized influencer mediaplan is being generated right now.
+          As soon as it's ready, we'll send it to{' '}
+          <span className="font-semibold text-primary">{email}</span>.
         </p>
 
         {/* Delivery note */}
         <p className="text-gray-500 text-sm mb-6">
-          The email may take up to <span className="font-semibold text-primary">10–15 minutes</span> to arrive.
+          Generation usually takes <span className="font-semibold text-primary">10–15 minutes</span>. Don't forget to check your spam folder!
         </p>
 
         {/* Close Button */}

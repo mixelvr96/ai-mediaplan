@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl text-white/70 max-w-4xl mx-auto mb-10">
-          Just type your request in the chat — and we'll find the right bloggers for you
+          Just type your request in the chat — and we'll find the right influencers for you
         </p>
 
         <button

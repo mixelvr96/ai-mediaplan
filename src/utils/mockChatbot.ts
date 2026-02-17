@@ -28,7 +28,7 @@ const conversationFlow: ConversationStep[] = [
     expectsUserResponse: true,
   },
   {
-    botMessage: "Wonderful! I have all the information I need. I'm ready to generate your personalized influencer mediaplan with detailed insights including follower counts, engagement rates, views, and geographic distribution.",
+    botMessage: "Wonderful! I have all the information I need. I'm starting to generate your personalized influencer mediaplan — this usually takes 10–15 minutes. Enter your email below and we'll send it to you the moment it's ready!",
     expectsUserResponse: false,
   },
 ];
@@ -71,7 +71,7 @@ export const processUserMessage = async (
     return {
       botMessage: {
         id: `bot-${Date.now()}`,
-        text: "Thank you! Click the 'Download' button below to get your mediaplan.",
+        text: "Your mediaplan is being generated! It takes about 10–15 minutes. Click the button below to enter your email — we'll send it straight to you the moment it's ready.",
         sender: 'bot',
         timestamp: new Date(),
       },

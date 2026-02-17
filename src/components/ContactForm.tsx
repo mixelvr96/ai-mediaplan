@@ -73,7 +73,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, onClose }) => {
           Get Your Influencer List
         </h2>
         <p className="text-gray-600 mb-6">
-          Enter your details below. We'll send the complete influencer mediaplan to your email within minutes.
+          Enter your details below. Your mediaplan is being generated — it takes 10–15 minutes. We'll send it to your email the moment it's ready.
         </p>
 
         {/* Form */}

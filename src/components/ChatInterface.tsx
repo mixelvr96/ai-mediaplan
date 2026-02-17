@@ -170,7 +170,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onDownloadClick }) => {
                 aria-label="Download your mediaplan"
               >
                 <FaDownload className="text-xl" />
-                <span>Download Your Mediaplan</span>
+                <span>Send Mediaplan to My Email</span>
               </button>
             )}
           </div>
