@@ -13,7 +13,9 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ onDownloadClick }) => {
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messages.length > 1 || isTyping) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   }, [messages, isTyping]);
 
   const handleSubmit = (e: React.FormEvent) => {
