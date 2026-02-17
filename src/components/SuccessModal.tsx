@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaCheckCircle, FaTimes } from 'react-icons/fa';
 
 interface SuccessModalProps {
@@ -7,14 +7,6 @@ interface SuccessModalProps {
 }
 
 const SuccessModal: React.FC<SuccessModalProps> = ({ email, onClose }) => {
-  // Auto-close after 8 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      onClose();
-    }, 8000);
-
-    return () => clearTimeout(timer);
-  }, [onClose]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
@@ -54,6 +46,11 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ email, onClose }) => {
           Check your inbox (and spam folder just in case)!
         </p>
 
+        {/* Delivery note */}
+        <p className="text-gray-500 text-sm mb-6">
+          The email may take up to <span className="font-semibold text-primary">10–15 minutes</span> to arrive.
+        </p>
+
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -62,10 +59,6 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ email, onClose }) => {
           Got It!
         </button>
 
-        {/* Auto-close indicator */}
-        <p className="text-gray-400 text-sm mt-4">
-          This message will close automatically in a few seconds
-        </p>
       </div>
     </div>
   );
